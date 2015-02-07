@@ -1,0 +1,432 @@
+/* 
+Guts Church Chop CSS Theme
+*/
+
+/* Google Webfont Fallback */
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
+
+/* Isotope Base CSS */
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+
+
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+      -ms-transition: none;
+       -o-transition: none;
+          transition: none;
+}
+
+
+
+/* Content Area */
+
+.container {
+	width: 100%;
+	max-width: 960px;
+}
+
+#content {
+background-repeat: no-repeat !important;
+background-position: 50% 0;
+background-attachment: fixed;
+overflow: scroll;
+height: auto;
+padding-bottom: 50px;
+}
+
+#hero-gallery {
+  width: 100%;
+}
+
+.rsOverflow {
+width: 100%;
+height: 100%;
+position: relative;
+overflow: hidden;
+float: left;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+#hero-gallery .rsOverflow {
+	height: auto !important;
+}
+
+.rsContainer {
+position: relative;
+width: 100%;
+height: 100%;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+#hero-gallery .rsOverflow .rsContainer {
+	height: 300px;
+}
+
+.rsSlide {
+	height: auto;
+}
+
+.FA_article {
+	height: 300px;
+	display: block;
+	margin: 0px auto 0;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	background-color: #dddddd;
+	background-size: auto 300px;
+}
+
+
+/* left side content(countdown,tabs,etc...) */
+#watch {
+width: 100%;
+max-width: 960px;
+display: none;
+}
+
+#video-box {
+width: 100%;
+height: 540px;
+}
+
+#video-sub {
+max-width: 640px;
+width: 100%;
+
+display: none;
+opacity: 0;
+}
+
+#video-quality {
+display: none !important;
+opacity: 0;
+}
+
+
+/* IE 6 Override */
+.centerMe {
+margin-left: auto;
+margin-right: auto;
+display: block;
+float: none;
+}
+
+/* right side content(media player,chat,etc...)  */
+
+#controls {
+width: 250px;
+}
+
+#timezone-picker {
+	display: none;
+}
+
+#sidebar {
+width: 100%;
+max-width: 960px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 0;
+}
+
+#filters > li {
+	display: inline-block;
+}
+
+#sidebar > div {
+	display: inline-block;
+	vertical-align: top;
+	margin: 5px;
+}
+
+#sidebar > .video,
+#sidebar > .video img {
+	max-width: 150px;
+	max-height: 112px;
+}
+
+#sidebar > .video:after {
+	background-color: transparent;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(100%, #000));
+	background-image: -webkit-linear-gradient(top, transparent 0%, #000);
+	background-image: -moz-linear-gradient(top, transparent 0%, #000);
+	background-image: -ms-linear-gradient(top, transparent 0%, #000);
+	background-image: -o-linear-gradient(top, transparent 0%, #000);
+	background-image: linear-gradient(top, transparent 0%, #000);
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 40%;
+	box-shadow: 0 1px 0 #000;
+}
+
+#sidebar > .interface,
+#sidebar > .external_content {
+/*	min-height: 310px; */
+}
+
+#sidebar > .video p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	vertical-align: bottom;
+	font-family: 'Oswald', 'Myriad Pro', 'Lucida Grande', Helvetica, Arial, san-serif;
+	font-weight: 300;
+	color: #fff;
+	text-shadow: 0px 0px 5px #000;
+	display: block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index: 1;
+	padding: 6px 8px 6px;
+}
+	
+#sidebar .interface {
+	width: 270px;
+	background-color: #ffffff; /* The Fallback */
+	background-color: rgba(255, 255, 255, 0.8); 
+}
+
+#upcoming-times-full-schedule {
+width: 270px;
+}
+
+#chat, #volunteer-overlay {
+width: 310px;
+}
+
+#chat .interface {
+height: auto;
+}
+
+#location_map {
+width: 100%;
+}
+
+.interface.first {
+/* min-height: 300px; */
+}
+
+
+/* Footer */
+
+#footer {
+	
+}
+
+/* title above player */
+.site-title {
+display: none;
+}
+
+/* everything else */
+
+#header .container img {
+width: auto;
+height: auto;
+padding-top: .8em;
+}
+
+.counter-container.small {
+	display: none !important;
+}
+
+#header {
+background-color: #fefefe;
+background: url(http://gutschurch.com/wp-content/themes/theme/images/white-noise.gif) top left;
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+}
+
+#navigation ul li a,
+#watch .site-title {
+text-decoration: none;
+font-family: 'Oswald', 'Myriad Pro', 'Lucida Grande', Helvetica, Arial, san-serif;
+font-weight: 400;
+text-transform: uppercase;
+}
+
+h1, h2, h3 {
+font-weight: 400;
+}
+
+#navigation ul li a {
+font-size: 1.3em;
+}
+
+.bttn > span,
+a.bttn,
+input.bttn {
+color: #777 !important;
+}
+
+
+
+.bttn {
+	display: inline-block;
+	white-space: nowrap;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+	padding: .2em 1.5em !important;
+	margin: 0.2em !important;
+	font: bold 1em/2em Arial, Helvetica;
+	text-decoration: none;
+	color: #777 !important;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+	-moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.25);
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.25);
+	font-family: 'Oswald', 'Myriad Pro', 'Lucida Grande', Helvetica, Arial, san-serif;
+	font-weight: 100;
+	background-color: #DDD;
+	background-image: -moz-linear-gradient(bottom,#CCC 0,#F1F1F1 100%);
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0%,#CCC),color-stop(100%,#F1F1F1));
+	background-image: -webkit-linear-gradient(bottom,#CCC 0,#F1F1F1 100%);
+	background-image: -o-linear-gradient(bottom,#CCC 0,#F1F1F1 100%);
+	background-image: -ms-linear-gradient(bottom,#CCC 0,#F1F1F1 100%);
+	background-image: linear-gradient(bottom,#CCC 0,#F1F1F1 100%);
+	-moz-box-shadow: 0 2px 2px 0 #999;
+	-webkit-box-shadow: 0 2px 2px 0 #999;
+	box-shadow: 0 2px 2px 0 #999;
+	text-transform: uppercase;
+}
+
+.bttn:hover
+{
+	background-color: #CCC;
+	background-image: -moz-linear-gradient(bottom,#CCC 0,#FCFCFC 100%);
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0%,#CCC),color-stop(100%,#FCFCFC));
+	background-image: -webkit-linear-gradient(bottom,#CCC 0,#FCFCFC 100%);
+	background-image: -o-linear-gradient(bottom,#CCC 0,#FCFCFC 100%);
+	background-image: -ms-linear-gradient(bottom,#CCC 0,#FCFCFC) 100%);
+	background-image: linear-gradient(bottom,#CCC 0,#FCFCFC 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#CCC', EndColorStr='#FCFCFC');
+	
+	text-decoration: none;
+}
+
+.bttn:active
+{
+	background-color: #CCC;
+	background-image: -moz-linear-gradient(top,#CCC 0,#F1F1F1 100%);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#CCC),color-stop(100%,#F1F1F1));
+	background-image: -webkit-linear-gradient(top,#CCC 0,#F1F1F1 100%);
+	background-image: -o-linear-gradient(top,#CCC 0,#F1F1F1 100%);
+	background-image: -ms-linear-gradient(top,#CCC 0,#F1F1F1 100%);
+	background-image: linear-gradient(top,#CCC 0,#F1F1F1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#CCC', EndColorStr='#F1F1F1');
+
+}
+
+.bttn:focus
+{
+	outline: 0;
+	background: #fafafa;
+}    
+
+.bttn:before
+{
+/*	background: #ccc; */
+/*	background: rgba(0,0,0,.1); */
+	float: right;
+	width: 1em;
+	text-align: right;
+	font-size: 1.5em;
+	margin: 0 -1em 0 1em;
+	padding: 0 .2em;
+	-moz-border-radius: .15em 0 0 .15em;
+	-webkit-border-radius: .15em 0 0 .15em;
+	border-radius: .15em 0 0 .15em;
+	pointer-events: none;
+	color: #777 !important;
+
+	content: "\232A";
+}
+
+#navigation ul li:last-child a:after {
+/* content: 'Give'; */
+}
+
+div.interface h3 + p > a > img {
+width: 100%;
+}
+
+#header > .container > img:first-child {
+cursor: pointer;
+}
+
+/* copyright addon */
+#copyright p:after {
+content: '| Designed by #TeamGuts';
+}
+
+
+/* Overrides */
+
+.hideMe {
+display: none !important;
+opacity: 0 !important;
+}
